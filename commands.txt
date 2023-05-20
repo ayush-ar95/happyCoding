@@ -1,0 +1,12 @@
+g++ ./fileName.cpp --> used for compilation of c++ programs.
+./a.out  --> used for execution of c++ programs.
+g++ -o nameOfExecutableFile nameOfProgramFile.cpp  --> used for remaning the source file's executable file.
+./nameOfExecutableFile  --> used to run renamed executable file.
+
+press command key and click on any header file to open it.
+https://en.cppreference.com/w/cpp/header   --> site to check standard c++ library files.
+
+open command platter ---> cmd + shift + p.
+copy line down ---> shift + option + down arrow.
+copy line up ---> shift + option + up arrow.
+toggle multicurser ---> cmd + m. 
