@@ -10,3 +10,5 @@ open command platter ---> cmd + shift + p.
 copy line down ---> shift + option + down arrow.
 copy line up ---> shift + option + up arrow.
 toggle multicurser ---> cmd + m. 
+
+forward delete ----> fn + option + delete.
