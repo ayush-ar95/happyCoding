@@ -15,9 +15,9 @@ public:
         a = v1;
         b = v2;
     }
-    void setDataBySum(complex o1, complex o2)   // here objects of this class is passed as arguments of functions.
+    void setDataBySum(complex o1, complex o2) // here objects of this class is passed as arguments of functions.
     {
-        a = o1.a + o2.a;        // we are accessing the values of objects and adding them together.
+        a = o1.a + o2.a; // we are accessing the values of objects and adding them together.
         b = o1.b + o2.b;
     }
     void printNumber()
