@@ -12,4 +12,4 @@ copy line up ---> shift + option + up arrow.
 toggle multicurser ---> cmd + m. 
 
 forward delete ----> fn + option + delete.
-toogle text wrap ----> option +z.
+toogle text wrap ----> shift + option + z.
