@@ -1,26 +1,49 @@
-// C++ Program to Demonstrate the Functioning of Enumerators
-// with an example of Gender
+// Parameterized Constructor using Friend Function Example :-
 #include <iostream>
-
+#include <cmath>
 using namespace std;
 
+class point
+{
+	int x, y;
+	friend int distance(point, point);
+
+public:
+	point(int a, int b)
+	{
+		x = a;
+		y = b;
+	}
+	void displayPoint()
+	{
+		cout << "The Point is : (" << x << "," << y << ")" << endl;
+	}
+};
+int distance(point p1, point p2)
+{
+	int x_diff = (p2.x - p1.x);
+	int y_diff = (p2.y - p1.y);
+	int diff = sqrt(pow(x_diff, 2) + pow(y_diff, 2));
+	// cout<< "The difference is : "<<diff<<endl;
+
+	return diff;
+}
 int main()
 {
-	// Defining enum Gender
-	enum Gender { Male, Female };
+	point p(1, 2);
+	point q(4, 6);
 
-	// Creating Gender type variable
-	Gender gender = Female;
+	point c(1, 1);
+	point d(1, 1);
 
-	switch (gender) {
-	case Male:
-		cout << "Gender is Male";
-		break;
-	case Female:
-		cout << "Gender is Female";
-		break;
-	default:
-		cout << "Value can be Male or Female";
-	}
+	point e(1, 0);
+	point f(70, 0);
+
+	int a = distance(p, q);
+	cout << "The difference is : " << a << endl;
+	a = distance(c, d);
+	cout << "The difference is : " << a << endl;
+	a = distance(e, f);
+	cout << "The difference is : " << a << endl;
 	return 0;
 }
