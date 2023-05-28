@@ -47,4 +47,12 @@ int main()
     3. They can't return values and do not have a return types.
     4. It can have default arguments.
     5. we cannot refer to their address.
+
+    Types of constructors:-
+    1. Default constructor
+    2. Parameterized constructor
+    3. Overloaded constructor
+    4. Constructor with default value
+    5. Copy constructor
+    6. Inline constructor 
 */
