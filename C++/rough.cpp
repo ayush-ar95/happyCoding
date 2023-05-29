@@ -1,49 +1,99 @@
-// Parameterized Constructor using Friend Function Example :-
 #include <iostream>
-#include <cmath>
+
 using namespace std;
 
-class point
+float a, b;
+
+class simpleCalculator
 {
-	int x, y;
-	friend int distance(point, point);
+public:
+	float simpleUtility();
+};
+
+float simpleCalculator ::simpleUtility()
+{
+	int choice;
+	cout << "Enter the operation choice: " << endl
+		 << "1 for additon" << endl
+		 << "2 for substraction" << endl
+		 << "3 for multiplication" << endl
+		 << "4 for division" << endl;
+	cin >> choice;
+
+	switch (choice)
+	{
+	case 1:
+		return (a + b);
+		break;
+	case 2:
+		return (a - b);
+		break;
+	case 3:
+		return (a * b);
+		break;
+	case 4:
+		return (a / b);
+		break;
+	default:
+		cout << "plz enter a valid choice" << endl;
+		return 0;
+	}
+}
+
+class scientificCalculator
+{
+public:
+	float scientificUtility();
+};
+
+class hybridCalculator : public simpleCalculator, public scientificCalculator
+{
+	float res;
 
 public:
-	point(int a, int b)
-	{
-		x = a;
-		y = b;
-	}
-	void displayPoint()
-	{
-		cout << "The Point is : (" << x << "," << y << ")" << endl;
-	}
+	void display();
+	void setData(float, float);
+	void calculator();
 };
-int distance(point p1, point p2)
-{
-	int x_diff = (p2.x - p1.x);
-	int y_diff = (p2.y - p1.y);
-	int diff = sqrt(pow(x_diff, 2) + pow(y_diff, 2));
-	// cout<< "The difference is : "<<diff<<endl;
 
-	return diff;
+void hybridCalculator ::setData(float x, float y)
+{
+	a = x;
+	b = y;
 }
+
+void hybridCalculator ::calculator()
+{
+	int choice;
+	cout << "which calculator u want to use:" << endl
+		 << "press 1 for simple claculator" << endl
+		 << "press 2 for scientific calculator" << endl;
+	cin >> choice;
+	switch (choice)
+	{
+	case 1:
+		res = simpleUtility();
+		break;
+
+	case 2:
+		res = scientificUtility();
+		break;
+
+	default:
+		cout << "Enter a valid choice" << endl;
+	}
+}
+
+void hybridCalculator ::display()
+{
+	cout << "the result is: " << res << endl;
+}
+
 int main()
 {
-	point p(1, 2);
-	point q(4, 6);
-
-	point c(1, 1);
-	point d(1, 1);
-
-	point e(1, 0);
-	point f(70, 0);
-
-	int a = distance(p, q);
-	cout << "The difference is : " << a << endl;
-	a = distance(c, d);
-	cout << "The difference is : " << a << endl;
-	a = distance(e, f);
-	cout << "The difference is : " << a << endl;
+	hybridCalculator c;
+	c.setData(10, 10);
+	c.calculator();
+	c.display();
 	return 0;
 }

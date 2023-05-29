@@ -37,8 +37,8 @@
 
     3. Private Mode: If we derive a subclass from a Private base class. Then both public members and protected members of the base class will become Private in the derived class.
 
-    default visibility mode is private.
-    private members of a base class be never get inherited in any case.
+    > default visibility mode is private.
+    > private members of a base class will never get inherited in any case.
 
     */
 
