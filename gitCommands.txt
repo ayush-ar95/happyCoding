@@ -1,3 +1,5 @@
 git push -u origin main ---> is used to push to the server where main is the name of the branch at server.
 git status ---> to check the status of the directory.
 git add 
+
+git rm -r --cached .vscode ---> this removes tracked file from git but keeps in the file system.
