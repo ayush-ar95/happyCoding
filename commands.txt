@@ -9,7 +9,9 @@ https://en.cppreference.com/w/cpp/header   --> site to check standard c++ librar
 open command platter ---> cmd + shift + p.
 copy line down ---> shift + option + down arrow.
 copy line up ---> shift + option + up arrow.
-toggle multicurser ---> option + click
+toggle multicurser ---> option + click.
+
+moving line up/down ---> option + up/down.
 
 forward delete ----> fn + option + delete.
 toogle text wrap ----> shift + option + z.
