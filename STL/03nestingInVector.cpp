@@ -16,9 +16,23 @@ void printVecArr(vector<int> &v)
 {
     for (int i = 0; i < v.size(); i++)
     {
-        cout << v[i]<<" ";
+        cout << v[i] << " ";
     }
-    cout<<endl;
+    cout << endl;
+}
+
+// printing vectors of vector.
+void printVecVec(vector<vector<int> > &v)
+{
+    cout << "The vector of vector is: " << endl;
+    for (int i = 0; i < v.size(); i++)
+    {
+        for (int j = 0; j < v[i].size(); j++)
+        {
+            cout << v[i][j] << " ";
+        }
+        cout << endl;
+    }
 }
 
 int main()
@@ -44,7 +58,7 @@ int main()
 
     // array of vector.
     int N;
-    cout << "enter the number of vectors: " << endl;
+    cout << "enter the size of vector array: " << endl;
     cin >> N;
     vector<int> v1[N]; // there are 10 vectors of 0 size which are stroed in an array.
     for (int i = 0; i < N; i++)
@@ -54,19 +68,40 @@ int main()
         cin >> n;
         for (int j = 0; j < n; j++)
         {
-            cout << "Enter the "<<j<<" elements: " << endl;
+            cout << "Enter the " << j << " elements: " << endl;
             int x;
             cin >> x;
             v1[i].push_back(x);
         }
     }
-    for(int i=0;i<N;i++)
+    for (int i = 0; i < N; i++)
     {
         printVecArr(v1[i]);
     }
 
     // vectors of vectors.
 
+    int N1;
+    cout << "Enter the size of outer vector: " << endl;
+    cin >> N1;
     vector<vector<int> > v2;
+    for (int i = 0; i < N1; i++)
+    {
+        int n;
+        cout << "Enter the size of nested vector: " << endl;
+        cin >> n;
+        vector<int> temp;
+        for (int j = 0; j < n; j++)
+        {
+            int x;
+            cout << "Enter the " << j << " element of nested vector :" << endl;
+            cin >> x;
+            temp.push_back(x);
+        }
+        v2.push_back(temp);
+    }
+
+    printVecVec(v2);
+
     return 0;
 }
